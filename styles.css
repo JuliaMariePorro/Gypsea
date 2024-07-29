@@ -1,0 +1,186 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Tabs Styling */
+.tabs {
+    margin: 20px;
+}
+
+.tab-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    font-size: 16px;
+    transition: background-color 0.1s ease;
+}
+
+.tab-button.active {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Wave Background */
+.wave-background {
+    position: relative; /* Ensure the sailboat is positioned relative to this container */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(120deg, #add8e6, #87CEEB, #4682b4, #4169e1);
+    background-size: 600% 600%;
+    animation: wave 20s ease infinite;
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 50px;
+}
+
+.sailboat {
+    position: absolute;
+    bottom: 20px;
+    left: -150px; /* Start position off-screen */
+    width: 100px;
+    height: 60px;
+    background-image: url('/Users/juliaporro/Desktop/Poetry/Sailboat.png'); /* Ensure this path is correct */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: sailboat-animation 10s linear infinite;
+}
+
+/* Sailboat Animation */
+@keyframes sailboat-animation {
+    from {
+        left: -150px;
+    }
+    to {
+        left: 100%; /* Move off-screen to the right */
+    }
+}
+
+/* Wave Animation */
+@keyframes wave {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 10em;
+    font-family: 'Sailor', sans-serif;
+    animation: waveMotion 5s ease-in-out infinite;
+}
+
+@keyframes waveMotion {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Adjust vertical movement */
+    }
+}
+
+.animated-text {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: 'Great Vibes', cursive; /* Ocean-like font for paragraphs */
+}
+
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sequential animation for each word */
+.animated-text span:nth-child(1) { animation-delay: 0.8s; }
+.animated-text span:nth-child(2) { animation-delay: 1.0s; }
+.animated-text span:nth-child(3) { animation-delay: 1.2s; }
+.animated-text span:nth-child(4) { animation-delay: 1.4s; }
+.animated-text span:nth-child(5) { animation-delay: 1.6s; }
+.animated-text span:nth-child(6) { animation-delay: 1.8s; }
+
+/* Flexbox Layout for Tab 2 */
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Reduced space between items */
+    padding: 10px; /* Adjusted padding */
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Slightly smaller border radius */
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Fixed width */
+    height: 500px; /* "Auto" for auto height to maintain aspect ratio */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+/* Hover Effect */
+.hover-effect:hover {
+    background-color: blue; /* Change background color to blue on hover */
+    color: pink; /* Optional: Change text color for better contrast */
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.grid-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px; /* Slightly smaller border radius for images */
+}
+
+.grid-item h2 {
+    font-size: 1.2em; /* Reduced font size */
+    margin: 8px 0; /* Adjusted margin */
+}
+
+.grid-item p {
+    font-size: 0.9em; /* Reduced font size */
+}
+
+.grid-item:hover {
+    transform: translateY(-3px); /* Reduced lift on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
