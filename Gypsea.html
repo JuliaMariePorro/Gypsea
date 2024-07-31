@@ -67,6 +67,7 @@
                 <span>I'll take the next flight,</span>
                 <span>When this storm ends,</span>
                 <span>This version I'll never see again.</span>
+                <!-- More spans -->
             </div>
             <div id="poe2" class="grid-item poetry2">
                 <h2>PERGATORY OF A LOST SOUL 7-27-24</h2>
@@ -79,6 +80,7 @@
                 <span>Haunted by giving in, saying goodbye to the lovely blue.</span>
                 <span>I've joined the lost souls in their suffering.</span>
                 <span>The blind trust in "it'll pass" needs to mean something.</span>
+                <!-- More spans -->
             </div>
             <div id="poe3" class="grid-item poetry3">
                 <h2>WHO'S TURN IS IT? 7-28-24</h2>
@@ -97,6 +99,7 @@
                 <span>Is it me or you now, whose turn is it to go?</span>
                 <span>The endless quest,</span>
                 <span>To find this heart at peace, at rest.</span>
+                <!-- More spans -->
             </div>
         </div>
     </div>
@@ -104,24 +107,20 @@
     <script>
         function openTab(tabId) {
             // Hide all tab contents
-            var contents = document.querySelectorAll('.tab-content');
-            contents.forEach(function(content) {
+            document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
 
             // Show the selected tab content
-            var selectedTab = document.getElementById(tabId);
-            if (selectedTab) {
-                selectedTab.classList.add('active');
-            }
+            document.getElementById(tabId).classList.add('active');
 
             // Update tab button states
-            var buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(function(button) {
+            document.querySelectorAll('.tab-button').forEach(button => {
                 button.classList.remove('active');
             });
-            document.querySelector('.tab-button[onclick="openTab(\'' + tabId + '\')"]').classList.add('active');
+            document.querySelector(`.tab-button[onclick="openTab('${tabId}')"]`).classList.add('active');
         }
     </script>
 </body>
 </html>
+
