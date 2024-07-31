@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     width: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scrollbars from appearing */
+    overflow: hidden;
 }
 
 /* Tabs Styling */
@@ -43,11 +43,11 @@ body, html {
 
 /* Wave Background */
 .wave-background {
-    position: relative; /* Ensure the foam is positioned relative to this container */
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(120deg, #3a7bd5, #00d2ff, #5fefb0, #9dff9b); /* Blue and green gradient */
+    background: linear-gradient(120deg, #3a7bd5, #00d2ff, #5fefb0, #9dff9b);
     background-size: 300% 300%;
     animation: gradientShift 15s ease infinite;
     display: flex;
@@ -76,9 +76,9 @@ body, html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for foam */
+    background: rgba(255, 255, 255, 0.2);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6) 80%);
-    background-size: 100px 100px; /* Adjust size for foam texture */
+    background-size: 100px 100px;
     animation: foam-animation 4s infinite linear;
 }
 
@@ -88,7 +88,7 @@ body, html {
         background-position: 0 0;
     }
     100% {
-        background-position: 100px 100px; /* Adjust to match background-size */
+        background-position: 100px 100px;
     }
 }
 
@@ -96,10 +96,10 @@ body, html {
 .sailboat {
     position: absolute;
     bottom: 20px;
-    left: -150px; /* Start position off-screen */
+    left: -150px;
     width: 100px;
     height: 60px;
-    background-image: url('/Users/juliaporro/Desktop/Poetry/Sailboat.png'); /* Ensure this path is correct */
+    background-image: url('Sailboat.png'); /* Adjust path if necessary */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -112,28 +112,28 @@ body, html {
         left: -150px;
     }
     to {
-        left: 100%; /* Move off-screen to the right */
+        left: 100%;
     }
 }
 
-/* Pulsing Animation for 'The Gypsea' */
+/* Pulsing Animation */
 h1.pulsing {
     animation: pulseAnimation 6s infinite;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: relative; /* Position relative to contain absolute children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 @keyframes pulseAnimation {
     0% {
-        transform: scale(1); /* Initial size */
+        transform: scale(1);
     }
     50% {
-        transform: scale(2); /* Scaled up to 2 times */
+        transform: scale(2);
     }
     100% {
-        transform: scale(1); /* Back to initial size */
+        transform: scale(1);
     }
 }
 
@@ -145,10 +145,10 @@ h1.pulsing span {
 
 @keyframes letterWave {
     0%, 100% {
-        transform: translateY(0); /* Initial position */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Move up */
+        transform: translateY(-10px);
     }
 }
 
@@ -170,55 +170,54 @@ h1.pulsing span:nth-child(14) { animation-delay: 1.3s; }
 h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 
 .text-container {
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center the text container */
-    text-align: center; /* Center-align text */
-    padding: 20px; /* Optional padding */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .text-container p {
-    font-size: 1em; /* Adjust font size */
-    margin: 10px 0; /* Space between paragraphs */
+    font-size: 1em;
+    margin: 10px 0;
 }
 
 /* Grid Container */
 .grid-container {
-    display: grid; /* Use grid layout */
-    grid-template-columns: 1fr; /* Single column for vertical alignment */
-    gap: 20px; /* Space between items */
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center the grid container */
-    padding: 20px; /* Optional padding */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Grid Item */
 .grid-item {
-    padding: 20px; /* Space inside each item */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transitions */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    /* Default styles, can be overridden by specific classes */
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Custom Grid Items */
 .grid-item.poetry1 {
-    background-color: rgb(5, 15, 150); /* Background color for the first grid item */
-    color: #e69696; /* Text color for the first grid item */
+    background-color: rgb(5, 15, 150);
+    color: #e69696;
 }
 
 .grid-item.poetry2 {
-    background-color: #66b30d; /* Background color for the second grid item */
-    color: #222; /* Text color for the second grid item */
+    background-color: #66b30d;
+    color: #222;
 }
 
 .grid-item.poetry3 {
-    background-color: rgb(163, 40, 40); /* Background color for the third grid item */
-    color: #111; /* Text color for the third grid item */
+    background-color: rgb(163, 40, 40);
+    color: #111;
 }
 
 /* Hover Effect */
 .grid-item:hover {
-    background-color: #ccc; /* Background color on hover */
+    background-color: #ccc;
 }
 
 /* Responsive Design Adjustments */
@@ -228,32 +227,32 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     .tab-button {
-        margin: 5px 0; /* Vertical margin for mobile view */
+        margin: 5px 0;
     }
 
     .grid-item {
-        width: calc(50% - 20px); /* Two items per row on tablets */
+        width: calc(50% - 20px);
     }
 
     h1 {
-        font-size: 6vw; /* Adjust font size for tablets */
+        font-size: 6vw;
     }
 
     .animated-text {
-        font-size: 1em; /* Adjust font size for tablets */
+        font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
     .grid-item {
-        width: calc(100% - 20px); /* Full-width items on mobile phones */
+        width: calc(100% - 20px);
     }
 
     h1 {
-        font-size: 7vw; /* Adjust font size for mobile phones */
+        font-size: 7vw;
     }
 
     .animated-text {
-        font-size: 0.9em; /* Adjust font size for mobile phones */
+        font-size: 0.9em;
     }
 }
