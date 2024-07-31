@@ -5,7 +5,8 @@ body, html {
     height: 100%;
     width: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Tabs Styling */
@@ -44,7 +45,7 @@ body, html {
 /* Wave Background */
 .wave-background {
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Ensure it covers full viewport height */
     width: 100%;
     overflow: hidden;
     background: linear-gradient(120deg, #3a7bd5, #00d2ff, #5fefb0, #9dff9b);
@@ -116,24 +117,30 @@ body, html {
     }
 }
 
-/* Pulsing Animation */
+/* Pulsing Animation for Header Text */
 h1.pulsing {
-    animation: pulseAnimation 6s infinite;
+    color: white; /* Text color white */
+    font-size: 11vw; /* Initial large size */
+    animation: pulseAnimation 8s;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
+/* Animation Keyframes */
 @keyframes pulseAnimation {
     0% {
         transform: scale(1);
+        font-size: 1vw;
     }
     50% {
-        transform: scale(2);
+        transform: scale(1); /* Grow to fill screen */
+        font-size: 20vw; /* Grow text to fit screen width */
     }
     100% {
         transform: scale(1);
+        font-size: 11vw; /* Shrink back to initial size */
     }
 }
 
@@ -173,12 +180,14 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .text-container p {
-    font-size: 1em;
-    margin: 10px 0;
+    font-size: 2em;
+    color: rgb(0, 68, 64);
+    font-family: monospace;
+    margin: 6px ;
 }
 
 /* Grid Container */
@@ -231,7 +240,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     .grid-item {
-        width: calc(50% - 20px);
+        width: 100%; /* Ensure grid items take full width */
     }
 
     h1 {
@@ -245,7 +254,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 
 @media (max-width: 480px) {
     .grid-item {
-        width: calc(100% - 20px);
+        width: 100%; /* Full width for smaller screens */
     }
 
     h1 {
@@ -256,3 +265,4 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
         font-size: 0.9em;
     }
 }
+
