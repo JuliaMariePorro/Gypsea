@@ -230,7 +230,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 }
 
 /* Responsive Design Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .tabs {
         flex-direction: column;
     }
@@ -244,11 +244,11 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     h1 {
-        font-size: 6vw;
+        font-size:11vw;
     }
 
     .animated-text {
-        font-size: 1em;
+        font-size: 2em;
     }
 }
 
@@ -262,7 +262,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     .animated-text {
-        font-size: 0.9em;
+        font-size: 0.4em;
     }
 }
 
