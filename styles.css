@@ -185,8 +185,36 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 
 .text-container p {
     font-size: 2em;
-    color: rgb(0, 68, 64);
-    font-family: monospace;
+    color: rgb(6, 179, 222);
+    font-family: sans-serif;
+    font-style: italic;
+    margin: 6px ;
+}
+
+.text-container1 {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.text-container1 p {
+    font-size: 1.5em;
+    color: whitesmoke;
+    font-family: cursive;
+    margin: 6px ;
+}
+.text-container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.text-container2 p {
+    font-size: 1em;
+    color: whitesmoke;
+    font-family: sans-serif;
     margin: 6px ;
 }
 
@@ -248,8 +276,8 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 }
 
 .grid-item.poetry8 {
-    background-color: rgb(50, 121, 75);
-    color: rgb(3, 94, 6) 40, 1);
+    background-color: whitesmoke;
+    color: orangered;
 }
 
 /* Hover Effect */
