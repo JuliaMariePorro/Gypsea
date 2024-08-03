@@ -193,7 +193,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 /* Grid Container */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns with minimum size */
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -206,7 +206,12 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(8, 203, 193)55, 255, 255); /* Default background color */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
 }
+
 
 /* Custom Grid Items */
 .grid-item.poetry1 {
@@ -216,27 +221,54 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 
 .grid-item.poetry2 {
     background-color: #66b30d;
-    color: #222;
+    color: #770000;
 }
 
 .grid-item.poetry3 {
     background-color: rgb(163, 40, 40);
     color: #111;
 }
+.grid-item.poetry4 {
+    background-color: rgb(2, 5, 54);
+    color: #f6b046;
+}
+
+.grid-item.poetry5 {
+    background-color: #be119e;
+    color: #551111;
+}
+
+.grid-item.poetry6 {
+    background-color: rgb(35, 136, 70);
+    color: #f6ba61;
+}
+.grid-item.poetry7 {
+    background-color: #be119e;
+    color: #551111;
+}
+
+.grid-item.poetry8 {
+    background-color: rgb(35, 136, 70);
+    color: #f6ba61;
+}
 
 /* Hover Effect */
 .grid-item:hover {
-    background-color: #ccc;
+    background-color: #f9f3f3;
 }
 
 /* Responsive Design Adjustments */
-@media (max-width: 100%) {
+@media (max-width: 768px) {
     .tabs {
         flex-direction: column;
     }
 
     .tab-button {
-        margin: 5px 0;
+        margin: 10px 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Full width on small screens */
     }
 
     .grid-item {
@@ -244,7 +276,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     h1 {
-        font-size:11vw;
+        font-size: 11vw;
     }
 
     .animated-text {
@@ -262,7 +294,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     }
 
     .animated-text {
-        font-size: 0.4em;
+        font-size: 0.9em;
     }
 }
 
