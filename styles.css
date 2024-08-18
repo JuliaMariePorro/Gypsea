@@ -280,8 +280,8 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     color: orangered;
 }
 .grid-item.poetry9 {
-    background-color: whitesmoke;
-    color: orangered;
+    background-color: #000000;
+    color: #fa5a76;
 }
 
 /* Hover Effect */
