@@ -288,6 +288,10 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     background-color: #eded05;
     color: #8c0618;
 }
+.grid-item.poetry11 {
+    background-color: #4f38ff;
+    color: #adffef;
+}
 
 /* Hover Effect */
 .grid-item:hover {
