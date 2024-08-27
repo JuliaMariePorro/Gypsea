@@ -48,7 +48,7 @@ body, html {
     min-height: 100vh; /* Ensure it covers full viewport height */
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(120deg, #3a7bd5, #00d2ff, #5fefb0, #9dff9b);
+    background: linear-gradient(120deg, #0969ed, #00d2ff, #5fefb0, #9dff9b);
     background-size: 300% 300%;
     animation: gradientShift 15s ease infinite;
     display: flex;
@@ -185,7 +185,7 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
 
 .text-container p {
     font-size: 2em;
-    color: rgb(6, 179, 222);
+    color: #0969ed;
     font-family: sans-serif;
     font-style: italic;
     margin: 6px ;
