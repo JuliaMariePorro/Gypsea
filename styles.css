@@ -325,6 +325,22 @@ h1.pulsing span:nth-child(15) { animation-delay: 1.4s; }
     background-color:#FFDBBB;
     color: #800080;
 }
+.grid-item.poetry20 {
+    background-color:#B85042;
+    color: #A7BEAE;
+}
+.grid-item.poetry21 {
+    background-color:#00246B;
+    color: #CADCFC;
+}
+.grid-item.poetry22 {
+    background-color:#F9E795;
+    color: #F96167;
+}
+.grid-item.poetry23 {
+    background-color:#FBEAEB;
+    color: #2F3C7E;
+}
 
 /* Hover Effect */
 .grid-item:hover {
